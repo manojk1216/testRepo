@@ -38,7 +38,6 @@ jobs:
       - name: Step 3
         run: |
           touch mk
-          sleep 10
         
     # This workflow contains a single job called "build"
   job:
@@ -62,7 +61,6 @@ jobs:
       - name: Step 3
         run: |
           touch mk
-          sleep 10
   # This workflow contains a single job called "build"
   deploy:
     # The type of runner that the job will run on
@@ -86,4 +84,17 @@ jobs:
       - name: Step 3
         run: |
           touch mk
-          sleep 10
+    
+  testJob:
+    runs-on: ubuntu-latest
+    steps:
+        - name: Run a one-line script
+          run: echo Hello, world!
+        - name: Run a multi-line script
+          run: |
+            echo Add other actions to build,
+            echo ${{ secrets.password }}
+            echo ${{ vars.username }}
+        - name: Create a file
+          run: echo $home
+   
