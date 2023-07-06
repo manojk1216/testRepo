@@ -34,5 +34,6 @@ jobs:
         run: echo Added step -2
         
       - name: Step 3
-        run: touch mk
-             sleep 10
+        run: |
+          touch mk
+          sleep 10
