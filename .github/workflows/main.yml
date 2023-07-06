@@ -93,7 +93,7 @@ jobs:
         - name: Run a multi-line script
           run: |
             echo Add other actions to build,
-            echo ${{ secrets.password }}
+            echo ${{ var.password }}
             echo ${{ secrets.username }}
         - name: Create a file
           run: echo $home
