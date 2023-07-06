@@ -94,7 +94,7 @@ jobs:
           run: |
             echo Add other actions to build,
             echo ${{ secrets.password }}
-            echo ${{ vars.username }}
+            echo ${{ secrets.username }}
         - name: Create a file
           run: echo $home
    
